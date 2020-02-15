@@ -95,14 +95,20 @@ Password (again): *********
 Superuser created successfully.
 ```
 
-## Login as admin
+## Login as admin and add a poll
 
 If the server is not running start it like so:
 ```
 $ python manage.py runserver
 ```
 
-Now, open a Web browser and go to “/admin/” on your local domain – e.g., `http://127.0.0.1:8000/admin/`. You should see the admin’s login screen:
+Now, open a Web browser and go to “/admin/” on your local domain – e.g., `http://127.0.0.1:8000/admin/`. You should see the admin’s login screen. Enter you username and password as you have created and press `login`.
 
-[admin screen picture](...)
+Now, you should see the section `POLLS` and `Questions` under it. Click the `+ Add` button located at the right side of `Questions` section.
 
+Enter all the information (question text, date published, 3 choices) and click `SAVE` button at the buttom.
+
+## Vote and see the results
+After you have created a new poll from the admin panel. You can go to the poll **index** page (`http://127.0.0.1:8000/polls/`). You should see the created poll listed there. If not, check the publish date whether it is today or in the past or not because you should not see the poll that would be published in the future.
+
+Then you can click on the poll and vote for the choices. After voted, the web should redirect you to the **results** page.
