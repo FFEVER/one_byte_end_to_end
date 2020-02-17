@@ -47,6 +47,13 @@ We use **sqlite** for simplification. If you use Mac, you can install it directl
 $ brew install sqlite3
 ```
 
+After you have installed **sqlite**, you can run migration from the root directory of the project. Use the following command:
+```
+python manage.py migrate
+```
+
+If there is no errors, you are good to go to the next section.
+
 # Testing
 
 You can run test suits from the root directory of the project with the following command:
