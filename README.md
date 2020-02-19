@@ -19,10 +19,10 @@ Things you may want to cover:
   - [Docker](#docker)
   - [Running the application](#running-the-application-1)
 - [Running the application on you own environment](#running-the-application-on-you-own-environment)
-- [Python and Django Version](#python-and-django-version)
-- [Database](#database)
-- [Testing](#testing)
-- [Up and Running](#up-and-running)
+  - [Python and Django Version](#python-and-django-version)
+  - [Database](#database)
+  - [Testing](#testing)
+  - [Up and Running](#up-and-running)
 - [What does the app do?](#what-does-the-app-do)
   - [Create admin user](#create-admin-user)
   - [Login as admin and add a poll](#login-as-admin-and-add-a-poll)
@@ -61,7 +61,7 @@ Use a username of `admin0` and password `adminadmin` to sign in.
 
 If you want to run the development server on your own environment, please follow the following intructions.
 
-# Python and Django Version
+## Python and Django Version
 
 `python 3.7.6`
 
@@ -71,7 +71,7 @@ We use [pyenv](https://github.com/pyenv/pyenv) and [pyenv-virtualenv](https://gi
 
 Please follow the tutorials from their github repo to set it up if you want to run the development server directly from your computer.
 
-# Database
+## Database
 
 `sqlite 3.31.1`
 
@@ -89,7 +89,7 @@ python manage.py migrate
 
 If there is no errors, you are good to go to the next section.
 
-# Testing
+## Testing
 
 You can run test suits from the root directory of the project with the following command:
 
@@ -99,7 +99,7 @@ $ python manage.py test polls
 
 The test cases are implemented in `/polls/tests.py`.
 
-# Up and Running
+## Up and Running
 
 After cloning the repo and setup **python** and **django**, you can run the development server by the following command:
 
