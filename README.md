@@ -12,26 +12,29 @@ This is a **simple poll web application**. The goal of this repository is to dem
 - Dockers
 - Kubernetes
 
-Using the provided docker environment for the Django web application on a docker container.
-
-- [Docker](#docker)
-
 Things you may want to cover:
 
 - [One Byte End to End - Distributed Computing KMITL](#one-byte-end-to-end---distributed-computing-kmitl)
+- [Running the application](#running-the-application)
+  - [Docker](#docker)
+  - [Running the application](#running-the-application-1)
+- [Running the application on you own environment](#running-the-application-on-you-own-environment)
 - [Python and Django Version](#python-and-django-version)
 - [Database](#database)
 - [Testing](#testing)
 - [Up and Running](#up-and-running)
 - [What does the app do?](#what-does-the-app-do)
   - [Create admin user](#create-admin-user)
-  - [Login as admin](#login-as-admin)
+  - [Login as admin and add a poll](#login-as-admin-and-add-a-poll)
+  - [Vote and see the results](#vote-and-see-the-results)
 
 To be updated
 
 - Deployment instructions
 
-# Docker
+# Running the application
+
+## Docker
 
 Install Docker engine on your local device from this link [Docker Desktop](https://hub.docker.com/?overlay=onboarding)
 
@@ -51,6 +54,12 @@ $ docker-compose up
 
 Go to `http://localhost:8000/admin` and the website is ready to use.
 Use a username of `admin0` and password `adminadmin` to sign in.
+
+---
+
+# Running the application on you own environment
+
+If you want to run the development server on your own environment, please follow the following intructions.
 
 # Python and Django Version
 
