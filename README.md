@@ -33,8 +33,6 @@ To be updated
 
 # Docker
 
-## Requirements
-
 Install Docker engine on your local device from this link [Docker Desktop](https://hub.docker.com/?overlay=onboarding)
 
 ## Running the application
@@ -51,7 +49,8 @@ Then, we can start running the docker container that is built from the docker im
 $ docker-compose up
 ```
 
-Go to `http://localhost:8000/admin` and the website is ready to use. Use a username of `admin0` and password `adminadmin` in order to sign in.
+Go to `http://localhost:8000/admin` and the website is ready to use.
+Use a username of `admin0` and password `adminadmin` to sign in.
 
 # Python and Django Version
 
