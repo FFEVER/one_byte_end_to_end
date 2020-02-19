@@ -12,6 +12,10 @@ This is a **simple poll web application**. The goal of this repository is to dem
 - Dockers
 - Kubernetes
 
+Using the provided docker environment for the Django web application on a docker container.
+
+- [Docker](#docker)
+
 Things you may want to cover:
 
 - [One Byte End to End - Distributed Computing KMITL](#one-byte-end-to-end---distributed-computing-kmitl)
@@ -26,6 +30,28 @@ Things you may want to cover:
 To be updated
 
 - Deployment instructions
+
+# Docker
+
+## Requirements
+
+Install Docker engine on your local device from this link [Docker Desktop](https://hub.docker.com/?overlay=onboarding)
+
+## Running the application
+
+To start Django web application on Docker, run the following command to pull down a based docker image and setup the environment on the docker image:
+
+```
+$ docker-compose build
+```
+
+Then, we can start running the docker container that is built from the docker image that we built previously by using this command:
+
+```
+$ docker-compose up
+```
+
+Go to `http://localhost:8000/admin` and the website is ready to use. Use a username of `admin0` and password `adminadmin` in order to sign in.
 
 # Python and Django Version
 
@@ -48,6 +74,7 @@ $ brew install sqlite3
 ```
 
 After you have installed **sqlite**, you can run migration from the root directory of the project. Use the following command:
+
 ```
 python manage.py migrate
 ```
@@ -67,35 +94,44 @@ The test cases are implemented in `/polls/tests.py`.
 # Up and Running
 
 After cloning the repo and setup **python** and **django**, you can run the development server by the following command:
+
 ```
 $ python manage.py runserver
 ```
+
 Go to `localhost:8000/polls/` in your browser. You should see the text `"No polls are available."`.
 
 # What does the app do?
+
 The app the a simple poll app from the [official django tutorial](https://docs.djangoproject.com/en/3.0/intro/tutorial01/). It has the following functionalities:
+
 - You can create polls with `question_text` and `pub_date` (date published).
 - The poll can have many `choices`.
 - You can select the `poll` and vote for `choices`.
 - You can see the results of votes for every `choices`.
 
 ## Create admin user
+
 Once you have run the server, you need to create a new admin user. Run the following command:
+
 ```
 $ python manage.py createsuperuser
 ```
 
 Enter your desired username and press enter.
+
 ```
 Username: admin
 ```
 
 You will then be prompted for your desired email address:
+
 ```
 Email address: admin@example.com
 ```
 
 The final step is to enter your password. You will be asked to enter your password twice, the second time as a confirmation of the first.
+
 ```
 Password: **********
 Password (again): *********
@@ -105,6 +141,7 @@ Superuser created successfully.
 ## Login as admin and add a poll
 
 If the server is not running start it like so:
+
 ```
 $ python manage.py runserver
 ```
@@ -116,6 +153,7 @@ Now, you should see the section `POLLS` and `Questions` under it. Click the `+ A
 Enter all the information (question text, date published, 3 choices) and click `SAVE` button at the buttom.
 
 ## Vote and see the results
+
 After you have created a new poll from the admin panel. You can go to the poll **index** page (`http://127.0.0.1:8000/polls/`). You should see the created poll listed there. If not, check the publish date whether it is today or in the past or not because you should not see the poll that would be published in the future.
 
 Then you can click on the poll and vote for the choices. After voted, the web should redirect you to the **results** page.
