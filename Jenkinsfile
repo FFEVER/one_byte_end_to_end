@@ -1,13 +1,12 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.6.7' } }
     stages {
-        stage('test stage') {
+        stage('build') {
             steps {
-                withPythonEnv('python'){
-                    sh 'python manage.py test polls'
-                    }
+                sh 'python --version'
             }
         }
     }
+}
 }
 
