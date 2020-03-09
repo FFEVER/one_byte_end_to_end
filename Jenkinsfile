@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('test stage') {
             steps {
-                sh 'python manage.py test polls'
+                withPythonEnv('python'){
+                    sh 'python manage.py test polls'
+                    }
             }
         }
     }
