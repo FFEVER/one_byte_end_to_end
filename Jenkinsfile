@@ -6,9 +6,8 @@ pipeline {
 
             steps {
 
-            withMaven(maven : 'M3_6_3'){
                     sh 'python manage.py test polls'
-                }
+
             }
         }
 
