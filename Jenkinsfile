@@ -1,16 +1,10 @@
 pipeline {
-    agent agent { docker { image 'python:3.7.6' } }
-
+    agent { docker { image 'python:3.7.6' } }
     stages {
-        stage ('test stage'){
-
+        stage('build') {
             steps {
-
-                    sh 'python manage.py test polls'
-
+                sh 'python manage.py test polls'
             }
         }
-
     }
 }
-
