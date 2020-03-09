@@ -6,7 +6,7 @@ pipeline {
 
             steps {
 
-                    sh 'python3 manage.py test polls'
+                    sh 'python manage.py test polls'
 
             }
         }
