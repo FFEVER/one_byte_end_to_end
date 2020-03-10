@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'python manage.py test polls'
             }
         }
+
     }
 }
