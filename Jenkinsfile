@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python manage.py test polls'
+                withPythonEnv('python3.5') {
+                     pysh 'python manage.py test polls'
+                }
+
             }
         }
 
