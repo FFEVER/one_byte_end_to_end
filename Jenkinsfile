@@ -6,14 +6,14 @@ pipeline {
                 sh 'python --version'
             }
         }
-    }
-    stages {
-            stage('test') {
-                steps {
-                    sh 'python manage.py test polls'
+
+        stage('test') {
+                    steps {
+                        sh 'python manage.py test polls'
+                    }
                 }
-            }
-        }
+    }
+
 
 }
 
