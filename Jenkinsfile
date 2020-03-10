@@ -1,20 +1,10 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.7.6' } }
     stages {
-        stage('version check') {
+        stage('build') {
             steps {
-               withPythonEnv('CPython-3.7') {
-                                   sh 'python --version'
-
-                               }
+                sh 'python --version'
             }
         }
-
-
     }
-
-
 }
-
-
-
