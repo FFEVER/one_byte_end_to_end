@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('version check') {
             steps {
-               withPythonEnv('python') {
+               withPythonEnv('CPython-3.7') {
                                    sh 'python --version'
 
                                }
