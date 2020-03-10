@@ -3,15 +3,14 @@ pipeline {
     stages {
         stage('version check') {
             steps {
-                sh 'python --version'
+               withPythonEnv('/usr/bin/python3.7.6') {
+                                   sh "python --version"
+
+                               }
             }
         }
 
-        stage('test') {
-                    steps {
-                        sh 'python manage.py test polls'
-                    }
-                }
+
     }
 
 
