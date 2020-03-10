@@ -8,7 +8,7 @@ pipeline {
         }
         stage('test') {
                     steps {
-                        sh 'pip install Django'
+                        sh 'pip install -r requirements.txt'
                         sh 'python manage.py test polls'
                     }
 
