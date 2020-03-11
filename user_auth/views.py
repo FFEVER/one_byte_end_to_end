@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.generics import CreateAPIView
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from user_auth.serializers import UserRegistrationSerializer
+from user_auth.serializers import UserLoginSerializer
 
 # Create your views here.
 class UserRegistrationView(CreateAPIView):
@@ -25,3 +27,21 @@ class UserRegistrationView(CreateAPIView):
 
         return Response(response, status=status_code)
 
+
+class UserLoginView(RetrieveAPIView):
+
+    permission_classes = (AllowAny,)
+    serializer_class = UserLoginSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        response = {
+            "success": "True",
+            "status code": status.HTTP_200_OK,
+            "message": "User logged in successfully",
+            "token": serializer.data["token"],
+        }
+        status_code = status.HTTP_200_OK
+
+        return Response(response, status=status_code)
